@@ -10,8 +10,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 # install telegraf
 sudo apt-get -yq --no-install-recommends install "${DIR}"/telegraf.deb
 
+# mark the output plugin as executable
 chmod +x "${DIR}"/telegraftoplayfabinsights
 
+# stop telegraf daemon so we can apply the new config file
 systemctl stop telegraf
 
 # remove \r\n in-place

@@ -39,3 +39,5 @@ Then, create a zip file with the following contents:
 You can now create a new MPS Build with your startup script using the [instructions here](https://learn.microsoft.com/en-us/gaming/playfab/features/multiplayer/servers/vmstartupscript).
 
 ![Linux logs with telegraf and Azure Data Explorer (Kusto)](../media/linux_logs_telegraf_kusto.png)
+| :--: |
+|Linux logs with telegraf and Azure Data Explorer (Kusto)|

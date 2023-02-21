@@ -48,3 +48,5 @@ Add these values to the PF_StartupScript.ps1 file. Then, create a zip file with 
 You can now create a new MPS Build with your startup script using the [instructions here](https://learn.microsoft.com/en-us/gaming/playfab/features/multiplayer/servers/vmstartupscript).
 
 ![Windows metrics with telegraf and Azure Monitor](../media/windows_metrics_telegraf_azuremonitor.png)
+| :--: |
+|Windows metrics with telegraf and Azure Monitor|
