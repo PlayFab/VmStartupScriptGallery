@@ -4,7 +4,7 @@
 
 VmStartupScript is a new feature for Azure PlayFab Multiplayer Servers (MPS) that allows you to customize each Virtual Machine that will host your game servers. Feature is currently in preview, you can see the docs [here](https://learn.microsoft.com/en-us/gaming/playfab/features/multiplayer/servers/vmstartupscript).
 
-This repository aims to include script files and relevant instructions about integration of various popular open source utilities and services with MPS. Repository is open to contributions!
+This repository aims to include script files and relevant instructions (recipes) about integration of various popular open source utilities and services with MPS. Repository is open to contributions!
 
 A lot of these samples require an [Azure subscription, click here to get started with the free offering](https://azure.com/free).
 
@@ -31,7 +31,7 @@ A lot of these samples require an [Azure subscription, click here to get started
 
 ## Debugging
 
-If you encounter challenges when running the scripts, you can see the ([instructions here on how to connect to Windows and Linux machines using RDP or SSH](https://learn.microsoft.com/en-us/gaming/playfab/features/multiplayer/servers/directly-debugging-game-servers)). The first thing you should take a look at are the files "PF_StartupScriptStdOut.txt" and "PF_StartupScriptStdErr.txt" that contain the script's standard output and standard error streams. These files are located either on D:\ drive on Windows or on /mnt folder on Linux.
+If you encounter challenges when running the scripts, you can see the [instructions here on how to connect to Windows and Linux machines using RDP or SSH](https://learn.microsoft.com/en-us/gaming/playfab/features/multiplayer/servers/directly-debugging-game-servers). The first thing you should take a look at are the files `PF_StartupScriptStdOut.txt` and `PF_StartupScriptStdErr.txt` that contain the script's standard output and standard error streams. These files are located either on `D:\` drive on Windows or on `/mnt` folder on Linux.
 
 ### Linux tips
 
