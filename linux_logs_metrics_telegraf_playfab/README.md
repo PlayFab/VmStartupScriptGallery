@@ -1,4 +1,4 @@
-# Linux metrics with telegraf and PlayFab
+# Linux logs and/or metrics with telegraf and PlayFab
 
 ## Introduction
 
