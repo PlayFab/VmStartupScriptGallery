@@ -10,11 +10,11 @@
 
 This script grabs real-time logs from all containers running on the VM and sends them to Azure Data Explorer. It also grabs and sends VM performance metrics (CPU, memory, network, disk) from your VM. You can configure the telegraf input plugins in the [telegraf.conf](telegraf.conf) file.
 
-This script is applicable if you are running Linux MPS Builds using Linux containers for your game servers.
+This script is applicable if you are running Linux MPS Builds using containers for your game servers.
 
 ## Usage
 
-You should the documentation for the input plugins you can use, specifically:
+You should refer to the documentation for the input plugins you can use, specifically:
 
 - [telegraf Docker Logs input plugin](https://github.com/influxdata/telegraf/blob/master/plugins/inputs/docker_log/README.md)
 - [telegraf cpu plugin](https://github.com/influxdata/telegraf/blob/master/plugins/inputs/cpu/README.md)
