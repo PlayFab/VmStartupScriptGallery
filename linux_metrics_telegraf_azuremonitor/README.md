@@ -10,7 +10,7 @@ You can see documentation about [Azure Monitor output telegraf plugin here](http
 
 ## What it does
 
-This script uses [telegraf](https://www.influxdata.com/time-series-platform/telegraf/) agent to capture and send VM metrics (CPU/Disk/Mem/Network) to Azure Monitor. The telegraf agent publishes [custom metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview) using the Azure Monitor REST API (preview). Custom metrics are available in these [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview#supported-regions). This script is applicable if you are running Linux MPS Builds using Linux containers or processes for your game servers.
+This script uses [telegraf](https://www.influxdata.com/time-series-platform/telegraf/) agent to capture and send VM metrics (CPU/Disk/Mem/Network) to Azure Monitor. The telegraf agent publishes [custom metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview) using the Azure Monitor REST API (preview). Custom metrics are available in these [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview#supported-regions). This script is applicable if you are running Linux MPS Builds using containers or processes for your game servers.
 
 ## Usage
 

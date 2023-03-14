@@ -8,11 +8,11 @@
 
 ## What it does
 
-This script grabs real-time logs from all containers running on the VM and sends them to Azure Data Explorer. Moreover, this script is applicable if you are running Linux MPS Builds using Linux containers for your game servers.
+This script grabs real-time logs from all containers running on the VM and sends them to Azure Data Explorer. Moreover, this script is applicable if you are running Linux MPS Builds using containers for your game servers.
 
 ## Usage
 
-You should the documentation for [Fluent Bit Azure Data Explorer plugin](https://docs.fluentbit.io/manual/pipeline/outputs/azure_kusto) to learn more about the steps you need to do, specifically:
+You should refer to the documentation for [Fluent Bit Azure Data Explorer plugin](https://docs.fluentbit.io/manual/pipeline/outputs/azure_kusto) to learn more about the steps you need to do, specifically:
 
 - Create a Kusto cluster and database to store the data ([click here for a free cluster](https://dataexplorer.azure.com/freecluster))
 - Create an Azure Registered Application so that fluentbit can authenticate to the cluster

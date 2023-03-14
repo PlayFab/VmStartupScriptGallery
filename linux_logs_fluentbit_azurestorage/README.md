@@ -8,7 +8,7 @@
 
 ## What it does
 
-This script uses [Fluent Bit](https://github.com/fluent/fluent-bit) to grab logs from Linux containers running in real time on the Virtual Machine and send them to an [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) account. This script is applicable if you are running Linux MPS Builds using Linux containers for your game servers.
+This script uses [Fluent Bit](https://github.com/fluent/fluent-bit) to grab logs from Linux containers running in real time on the Virtual Machine and send them to an [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) account. This script is applicable if you are running Linux MPS Builds using containers for your game servers.
 
 ## Usage
 

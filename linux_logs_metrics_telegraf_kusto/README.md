@@ -10,11 +10,11 @@
 
 This script grabs real-time logs from all containers running on the VM and sends them to Azure Data Explorer. It also grabs and sends VM performance metrics (CPU, memory, network, disk) from your VM. You can configure the telegraf input plugins in the [telegraf.conf](telegraf.conf) file.
 
-This script is applicable if you are running Linux MPS Builds using Linux containers for your game servers.
+This script is applicable if you are running Linux MPS Builds using containers for your game servers.
 
 ## Usage
 
-You should the documentation for the input plugins you can use, specifically:
+You should refer to the documentation for the input plugins you can use, specifically:
 
 - [telegraf Docker Logs input plugin](https://github.com/influxdata/telegraf/blob/master/plugins/inputs/docker_log/README.md)
 - [telegraf cpu plugin](https://github.com/influxdata/telegraf/blob/master/plugins/inputs/cpu/README.md)
@@ -56,3 +56,15 @@ You can now create a new MPS Build with your startup script using the [instructi
 ![Linux metrics with telegraf and Azure Data Explorer (Kusto)](../media/linux_metrics_telegraf_kusto.png)
 | :--: |
 |Linux metrics with telegraf and Azure Data Explorer (Kusto)|
+
+## Azure Data Explorer (Kusto) charts
+
+We have included a [sample JSON file](dashboard-MPS-telegraf.json) that contains Kusto charts you can use in your dashboards to visualize the metrics coming from telegraf. You can check [here for the Azure Data Explorer dashboards documentation](https://learn.microsoft.com/en-us/azure/data-explorer/azure-data-explorer-dashboards).
+
+![Charts for Linux metrics (CPU/memory/disk)](../media/linux_metrics_kusto_charts_1.png)
+| :--: |
+|Charts for Linux metrics (CPU/memory/disk)|
+
+![Charts for Linux metrics (disk/network)](../media/linux_metrics_kusto_charts_2.png)
+| :--: |
+|Charts for Linux metrics (disk/network)|
