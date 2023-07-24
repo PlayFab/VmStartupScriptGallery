@@ -17,7 +17,7 @@ This script is applicable if you are running Windows MPS Builds using Windows co
 ## Usage
 
 You should download telegraf from the [GitHub releases](https://github.com/influxdata/telegraf/releases) section. The [Windows amd64 package](https://dl.influxdata.com/telegraf/releases/telegraf-1.24.4_windows_amd64.zip) works with this sample.
-Then, you should open a new [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) and grab the instrumentation key. You should add this key to the telegraf.conf file.
+Then, you should open a new [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) account.
 
 You should create an Azure resource where the Azure Monitor metrics will be published to. For our sample, we created a VMSS (Virtual Machine Scaleset resource) with 0 Virtual Machines (so there is no compute charge) but a single VM in the deallocated state could also work. Once you do that, you should copy the resource ID and add it to the telegraf.conf file.
 
