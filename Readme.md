@@ -27,6 +27,7 @@ A lot of these samples require an [Azure subscription, click here to get started
 | ----- | ----------- |
 | [Windows New Script Template](windows_new_script_template) | You should use this script to get started with using the feature in Windows VMs. |
 | [Windows metrics with Telegraf and Azure Monitor](windows_metrics_telegraf_azuremonitor) | This script installs and configures [Telegraf](https://github.com/influxdata/telegraf) to send VM performance metrics (CPU/memory/disk/network) to [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview). |
+| [Windows metrics with Telegraf and Application Insights](windows_metrics_telegraf_applicationinsights) | This script installs and configures [Telegraf](https://github.com/influxdata/telegraf) to send VM performance metrics (CPU/memory/disk/network) to [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview). |
 | [Windows logs with Telegraf and PlayFab](windows_logs_telegraf_playfab) | This script installs and configures [Telegraf](https://github.com/influxdata/telegraf) to grab game server logs and send them to [PlayFab](https://learn.microsoft.com/en-us/gaming/playfab/). |
 | [Windows enable optional diagnostics](windows_enable_optional_diagnostics) | This script enables sending diagnostic data notify Microsoft of application faults, kernel faults, unresponsive applications, and other application specific problems. |
 
