@@ -24,6 +24,11 @@ You should download telegraf from the [GitHub releases](https://github.com/influ
 Then, you should create a [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) resource in your subscription.
 Copy the Instrumentation key from the Overview of the Application Insights resource you created and paste it into the telegraf.conf file.
 
+```shell
+# Instrumentation key of the Application Insights resource.
+instrumentation_key = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx"
+```
+
 Add these values to the PF_StartupScript.ps1 file. Then, create a zip file with the following contents:
 
 - telegraf.conf
