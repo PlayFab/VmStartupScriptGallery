@@ -15,7 +15,7 @@ This script uses [telegraf](https://www.influxdata.com/time-series-platform/tele
 This script is applicable if you are running Windows MPS Builds using Windows containers or processes for your game servers.
 
 The result is almost the same as [Windows metrics with telegraf and Azure Monitor](../windows_metrics_telegraf_azuremonitor/README.md).
-But There is no need to prepare a dummy VMSS.
+But there is no need to prepare a dummy VMSS.
 Instead, creating an Application Insights resource.
 
 ## Usage
