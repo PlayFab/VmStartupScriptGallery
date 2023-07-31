@@ -24,25 +24,6 @@ You should download telegraf from the [GitHub releases](https://github.com/influ
 Then, you should create a [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) resource in your subscription.
 Copy the Instrumentation key from the Overview of the Application Insights resource you created and paste it into the telegraf.conf file.
 
-
-We need telegraf to be able to authenticate to Application Insights on your subscription so it can post the metrics. Use the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/) to create a service principal with the "Monitoring Metrics Publisher" role for the subscription that metrics will be published against (subscription ID can be retrieved using `az account list` or from the Azure portal):
-
-```bash
-az ad sp create-for-rbac --role="Monitoring Metrics Publisher" --scopes="/subscriptions/<replace-with-subscription-id>"
-```
-
-On success, the output will look similar to:
-
-```json
-{
-    "appId": "xxx",         // AZURE_CLIENT_ID
-    "displayName": "xxx",
-    "name": "xxx",
-    "password": "xxx",      // AZURE_CLIENT_SECRET
-    "tenant": "xxx"         // AZURE_TENANT_ID
-}
-```
-
 Add these values to the PF_StartupScript.ps1 file. Then, create a zip file with the following contents:
 
 - telegraf.conf

@@ -36,11 +36,5 @@ cp "$scriptPath\telegraf.*" "$telegrafPath"
 cd "$telegrafPath"
 .\telegraf.exe --service install --config "$telegrafPath\telegraf.conf"
 
-# configure environment variables for the telegraf service
-$registryPath = "HKLM:HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\telegraf"
-# edit the below values with your Azure Tenant ID, Client ID, and Client Secret
-$values = @("AZURE_TENANT_ID=<tenantID>", "AZURE_CLIENT_ID=<clientID>", "AZURE_CLIENT_SECRET=<clientSecret>")
-New-ItemProperty -Path $registryPath -Name "Environment" -Value $values -PropertyType MultiString -Force 
-
 # start the telegraf service
 .\telegraf.exe --service start
