@@ -10,7 +10,7 @@ You can see documentation about [Telegraf output plugin for PlayFab here](https:
 
 ## What it does
 
-This script uses [telegraf](https://www.influxdata.com/time-series-platform/telegraf/) agent to grab game server logs emitted via the [Game Server SDK (GSDK)](https://github.com/playfab/gsdk) and send them to PlayFab. GSDK logs from game servers are written in paths `"D:\\GameLogs\\*\\GSDK_output_*.txt"`. These text files contents' are grabbed by the [tail](https://github.com/influxdata/telegraf/blob/master/plugins/inputs/tail/README.md) telegraf plugin and converted to proper telegraf metrics via the [grok](https://docs.influxdata.com/telegraf/v1.26/data_formats/input/grok/) format. Finally, the [Telegraf output plugin for PlayFab here](https://github.com/dgkanatsios/telegraftoplayfab) pushes these logs to PlayFab.
+This script uses [telegraf](https://www.influxdata.com/time-series-platform/telegraf/) agent to grab game server logs emitted via the [Game Server SDK (GSDK)](https://github.com/playfab/gsdk) and send them to PlayFab. GSDK logs from game servers are written in paths `"D:\\GameLogs\\*\\GSDK_output_*.txt"`. Content in these text files is grabbed by the [tail](https://github.com/influxdata/telegraf/blob/master/plugins/inputs/tail/README.md) telegraf plugin and converted to proper telegraf metrics via the [grok](https://docs.influxdata.com/telegraf/v1.26/data_formats/input/grok/) format. Finally, the [Telegraf output plugin for PlayFab here](https://github.com/dgkanatsios/telegraftoplayfab) pushes these logs to PlayFab.
 
 This script is applicable if you are running Windows MPS Builds using Windows game servers.
 
