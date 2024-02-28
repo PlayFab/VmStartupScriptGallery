@@ -57,14 +57,6 @@ Then, create a zip file with the following contents:
 
 - telegraf.conf
 - telegraf package file (e.g. telegraf.exe)
-- PF_StartupScript.ps1 file
+- PF_StartupScript.ps1 or PF_StartupScript.sh file (depending on the OS you are using)
 
 You can now create a new MPS Build with your startup script using the [instructions here](https://learn.microsoft.com/en-us/gaming/playfab/features/multiplayer/servers/vmstartupscript).
-
-![Windows logs with telegraf and PlayFab](../media/windows_logs_telegraf_playfab.png)
-| :--: |
-|Windows logs with telegraf and PlayFab|
-
-
-
-
