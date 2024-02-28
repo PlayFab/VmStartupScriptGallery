@@ -24,3 +24,12 @@ echo "PlayFab Virtual Machine ID is $env:PF_VM_ID" # e.g. vmss:SouthCentralUs:24
 echo "Region where the VM is deployed is $env:PF_REGION" # e.g. SouthCentralUs
 echo "Shared content folder is $env:PF_SHARED_CONTENT_FOLDER_VM" # e.g. D:\sharedcontentfolder (All servers running on this VM have access to this folder through the PF_SHARED_CONTENT_FOLDER env variable.)
 
+# install telegraf as a Windows service
+$telegrafPath = 'C:\Program Files\telegraf'
+New-Item -ItemType Directory -Force -Path "$telegrafPath"
+cp "$scriptPath\telegraf.*" "$telegrafPath"
+cd "$telegrafPath"
+.\telegraf.exe --service install --config "$telegrafPath\telegraf.conf"
+
+# start the telegraf service
+.\telegraf.exe --service start
