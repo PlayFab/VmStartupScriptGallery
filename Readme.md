@@ -20,6 +20,7 @@ A lot of these samples require an [Azure subscription, click here to get started
 | [Linux metrics with Telegraf and Azure Monitor](linux_metrics_telegraf_azuremonitor) | This script installs and configures [Telegraf](https://github.com/influxdata/telegraf) to send VM performance metrics (CPU/memory/disk/network) to [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview). |
 | [Linux logs with Fluent Bit and Azure Data Explorer (Kusto)](linux_logs_fluentbit_kusto) | This script installs and configures [Fluent Bit](https://github.com/fluent/fluent-bit) to capture real-time logs from your game servers and send them to [Azure Data Explorer (Kusto)](https://learn.microsoft.com/en-us/azure/data-explorer/data-explorer-overview). |
 | [Linux logs with Fluent Bit and Azure Blob Storage](linux_logs_fluentbit_azurestorage) | This script installs and configures [Fluent Bit](https://github.com/fluent/fluent-bit) to capture real-time logs from your game servers and send them to [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction). |
+| [Linux custom game server metrics](windows_linux_custom_gameserver_metrics) | This script shows you how to send metrics from your game server to [Telegraf](https://github.com/influxdata/telegraf) and then to the backend of your choice |
 
 ### Windows
 
@@ -30,6 +31,7 @@ A lot of these samples require an [Azure subscription, click here to get started
 | [Windows metrics with Telegraf and Application Insights](windows_metrics_telegraf_applicationinsights) | This script installs and configures [Telegraf](https://github.com/influxdata/telegraf) to send VM performance metrics (CPU/memory/disk/network) to [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview). |
 | [Windows logs with Telegraf and PlayFab](windows_logs_telegraf_playfab) | This script installs and configures [Telegraf](https://github.com/influxdata/telegraf) to grab game server logs and send them to [PlayFab](https://learn.microsoft.com/en-us/gaming/playfab/). |
 | [Windows enable optional diagnostics](windows_enable_optional_diagnostics) | This script enables sending diagnostic data notify Microsoft of application faults, kernel faults, unresponsive applications, and other application specific problems. |
+| [Windows custom game server metrics](windows_linux_custom_gameserver_metrics) | This script shows you how to send metrics from your game server to [Telegraf](https://github.com/influxdata/telegraf) and then to the backend of your choice |
 
 ## Debugging
 
