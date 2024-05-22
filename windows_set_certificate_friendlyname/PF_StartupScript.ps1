@@ -33,7 +33,6 @@ $cert = Get-ChildItem -Path Cert:\LocalMachine\My | Where-Object { $_.SubjectNam
 if ($cert) {
     # ACTION: specify a proper friendly name for your certificate
     $cert.FriendlyName = "My cert friendly name"
-    $cert | Out-Null  # Suppress output
     Write-Host "Friendly name set to 'My cert friendly name' for the certificate with subject name: $subjectName"
 } else {
     Write-Host "Certificate with subject name '$subjectName' not found."
