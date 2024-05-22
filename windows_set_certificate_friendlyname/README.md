@@ -1,0 +1,6 @@
+# Windows - set certificate with friendly name
+
+The FriendlyName property is a Windows-only piece of metadata that can be included in a PFX certificate file. This field may get removed from any certificate uploaded as part of an PlayFab Build. In most cases this is acceptable--the FriendlyName is only supposed to help a human user identify a certificate when looking though a computer's certificate store.
+Some programs, however, search for certificates using their FriendlyNames. If changing the program to search for the certificate using a more standard method (e.g. Subject, Thumbprint, etc) isn't possible, you can use this script to set the FriendlyName on startup.
+
+**NOTE**: This script is applicable only to Windows process-based Builds. In this case, certs are deployed to the local machine store of the VM so the VmStartupScript can access them and set the friendly name. If you are running Builds using Windows containers, you can use a similar script on your StartGameCommand (before you start your game server).
