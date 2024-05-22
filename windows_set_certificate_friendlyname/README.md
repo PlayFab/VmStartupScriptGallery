@@ -1,0 +1,5 @@
+# Windows - set certificate with friendly name
+
+Sometimes our game server code needs to access a certificate by its friendly name. The friendly name property is a Windows only property which is not guaranteed to be present when PlayFab copies the cert into the VM. However, sometimes we cannot change the game server code to reference the certificate with more standard methods (e.g. Subject, Thumbprint, etc). This script helps you set the friendly name of a certificate in the Windows certificate store.
+
+**NOTE**: Script is applicable only to PlayFab Builds using Windows processes. In this case, certs are deployed to the local machine store of the VM so the VmStartupScript can access them and set the friendly name. If you are running Builds using Windows containers, you can use a similar script on your StartGameCommand (before you start your game server).
