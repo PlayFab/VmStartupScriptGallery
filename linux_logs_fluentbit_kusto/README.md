@@ -16,13 +16,13 @@ You should refer to the documentation for [Fluent Bit Azure Data Explorer plugin
 
 - Create a Kusto cluster and database to store the data ([click here for a free cluster](https://dataexplorer.azure.com/freecluster))
 - Create an Azure Registered Application so that fluentbit can authenticate to the cluster
-  - [Register an application](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application)
-  - [Add a client secret](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret)
-  - [Authorize the app in the database](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/principals-and-identity-providers#azure-ad-tenants)
-    - During our tests, it wasn't clear if adding the service Principal in the table "users" was enough, or if it was also necessary to add it in the table "ingestors" or "admins"
+  - [Register an application](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application)
+  - [Add a client secret](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret)
+  - [Authorize the app in the database](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/principals-and-identity-providers#azure-ad-tenants)
+    - During our tests, it was unclear whether adding the service principal to the "users" table was sufficient, or if it also needed to be added to "ingestors" or "admins"
 
 ```kql
-// Azure AD App on your tenant tenant - by tenant ID
+// Azure AD App on your tenant - by tenant ID
 .add database MyDatabase admins ('aadapp=<servicePrincipalApplicationID>;<tenantID>') 'Test app for fluentbit'
 ```
 

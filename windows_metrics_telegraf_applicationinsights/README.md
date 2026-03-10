@@ -10,7 +10,7 @@ You can see documentation about Application Insights output telegraf plugin [her
 
 ## What it does
 
-This script uses [telegraf](https://www.influxdata.com/time-series-platform/telegraf/) agent to send VM metrics to Application Insights. The telegraf agent publishes [custom metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview) using the Azure Monitor REST API. Custom metrics are available in these [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview#supported-regions).
+This script uses [telegraf](https://www.influxdata.com/time-series-platform/telegraf/) agent to send VM metrics to Application Insights. The telegraf agent publishes [custom metrics](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview) using the Azure Monitor REST API. Custom metrics are available in these [regions](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview#supported-regions).
 
 This script is applicable if you are running Windows MPS Builds using Windows containers or processes for your game servers.
 
@@ -21,7 +21,7 @@ Instead, creating an Application Insights resource.
 ## Usage
 
 You should download telegraf from the [GitHub releases](https://github.com/influxdata/telegraf/releases) section. The [Windows amd64 package](https://dl.influxdata.com/telegraf/releases/telegraf-1.24.4_windows_amd64.zip) works with this sample.
-Then, you should create a [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) resource in your subscription.
+Then, you should create an [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) resource in your subscription.
 Copy the Instrumentation key from the Overview of the Application Insights resource you created and paste it into the telegraf.conf file.
 
 ```shell
