@@ -58,7 +58,7 @@ Support for these scripts is community based via GitHub issues. MPS team does no
 ## Links
 
 - [PlayFab Multiplayer Services](https://playfab.com/multiplayer)
-- [PlayFab Multiplayer Servers Documentation](https://docs.microsoft.com/en-us/gaming/playfab/features/multiplayer/servers/overview)
+- [PlayFab Multiplayer Servers Documentation](https://learn.microsoft.com/en-us/gaming/playfab/features/multiplayer/servers/overview)
 - [PlayFab Game Server SDK (GSDK)](https://github.com/PlayFab/gsdk)
 - [PlayFab GSDK samples](https://github.com/PlayFab/MpsSamples)
 - [Local Multiplayer Agent](https://github.com/PlayFab/MpsAgent)

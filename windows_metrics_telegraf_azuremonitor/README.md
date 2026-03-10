@@ -10,7 +10,7 @@ You can see documentation about Azure Monitor output telegraf plugin [here](http
 
 ## What it does
 
-This script uses [telegraf](https://www.influxdata.com/time-series-platform/telegraf/) agent to send VM metrics to Azure Monitor. The telegraf agent publishes [custom metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview) using the Azure Monitor REST API. Custom metrics are available in these [regions](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview#supported-regions).
+This script uses [telegraf](https://www.influxdata.com/time-series-platform/telegraf/) agent to send VM metrics to Azure Monitor. The telegraf agent publishes [custom metrics](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview) using the Azure Monitor REST API. Custom metrics are available in these [regions](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview#supported-regions).
 
 This script is applicable if you are running Windows MPS Builds using Windows containers or processes for your game servers.
 
@@ -21,7 +21,7 @@ Then, you should open a new [Azure Monitor](https://learn.microsoft.com/en-us/az
 
 You should create an Azure resource where the Azure Monitor metrics will be published to. For our sample, we created a VMSS (Virtual Machine Scaleset resource) with 0 Virtual Machines (so there is no compute charge) but a single VM in the deallocated state could also work. Once you do that, you should copy the resource ID and add it to the telegraf.conf file.
 
-We need telegraf to be able to authenticate to Azure Monitor on your subscription so it can post the metrics. Use the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/) to create a service principal with the "Monitoring Metrics Publisher" role for the subscription that metrics will be published against (subscription ID can be retrieved using `az account list` or from the Azure portal):
+We need telegraf to be able to authenticate to Azure Monitor on your subscription so it can post the metrics. Use the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/) to create a service principal with the "Monitoring Metrics Publisher" role for the subscription that metrics will be published against (subscription ID can be retrieved using `az account list` or from the Azure portal):
 
 ```bash
 az ad sp create-for-rbac --role="Monitoring Metrics Publisher" --scopes="/subscriptions/<replace-with-subscription-id>"

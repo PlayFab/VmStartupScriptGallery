@@ -25,15 +25,15 @@ You should refer to the documentation for the input plugins you can use, specifi
 
 Documentation for the [telegraf Azure Data Explorer output plugin is here](https://github.com/influxdata/telegraf/tree/master/plugins/outputs/azure_data_explorer). To use this plugin, you need to:
 
-- Create a Azure Data Explorer (Kusto) cluster and database to store the data ([check here for a free cluster](https://dataexplorer.azure.com/freecluster))
+- Create an Azure Data Explorer (Kusto) cluster and database to store the data ([check here for a free cluster](https://dataexplorer.azure.com/freecluster))
 - Create an Azure Registered Application so that telegraf can authenticate to the cluster
-  - [Register an application](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application)
-  - [Add a client secret](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret)
-  - [Authorize the app in the database](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/principals-and-identity-providers#azure-ad-tenants)
+  - [Register an application](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application)
+  - [Add a client secret](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret)
+  - [Authorize the app in the database](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/principals-and-identity-providers#azure-ad-tenants)
     - If you want telegraf to dynamically create tables, you should add this to the group "admins". If you want to create the tables manually, you should add this to the group "users" or "ingestors".
 
 ```kql
-// Azure AD App on your tenant tenant - by tenant ID
+// Azure AD App on your tenant - by tenant ID
 .add database MyDatabase admins ('aadapp=<servicePrincipalApplicationID>;<tenantID>') 'Test app for telegraf'
 ```
 
