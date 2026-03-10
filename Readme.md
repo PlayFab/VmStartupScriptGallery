@@ -31,6 +31,7 @@ A lot of these samples require an [Azure subscription, click here to get started
 | [Windows metrics with Telegraf and Application Insights](windows_metrics_telegraf_applicationinsights) | This script installs and configures [Telegraf](https://github.com/influxdata/telegraf) to send VM performance metrics (CPU/memory/disk/network) to [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview). |
 | [Windows logs with Telegraf and PlayFab](windows_logs_telegraf_playfab) | This script installs and configures [Telegraf](https://github.com/influxdata/telegraf) to grab game server logs and send them to [PlayFab](https://learn.microsoft.com/en-us/gaming/playfab/). |
 | [Windows enable optional diagnostics](windows_enable_optional_diagnostics) | This script enables sending diagnostic data notify Microsoft of application faults, kernel faults, unresponsive applications, and other application specific problems. |
+| [Windows detect CPU variant and send to PlayFab](windows_detect_cpu_variant_playfab) | This script detects the CPU SKU and microarchitecture of an Azure VM and sends it to [PlayFab](https://learn.microsoft.com/en-us/gaming/playfab/) as a telemetry event via the WriteTelemetryEvents API. |
 | [Windows custom game server metrics](windows_linux_custom_gameserver_metrics) | This script shows you how to send metrics from your game server to [Telegraf](https://github.com/influxdata/telegraf) and then to the backend of your choice |
 
 ## Debugging
