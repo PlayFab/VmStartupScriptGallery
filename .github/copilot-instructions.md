@@ -6,12 +6,14 @@ A gallery of startup scripts for **Azure PlayFab Multiplayer Servers (MPS)** tha
 
 ## Linting
 
-Shell scripts are validated with **ShellCheck** (severity: `error`) on every PR and push to `main`. There is no PowerShell linting in CI currently.
-
-Run ShellCheck locally:
+Shell scripts are validated with **ShellCheck** (severity: `error`) and PowerShell scripts with **PSScriptAnalyzer** on every PR and push to `main`.
 
 ```bash
+# Run ShellCheck locally
 shellcheck <script>.sh
+
+# Run PSScriptAnalyzer locally
+pwsh -Command "Invoke-ScriptAnalyzer -Path . -Recurse"
 ```
 
 ## Architecture
