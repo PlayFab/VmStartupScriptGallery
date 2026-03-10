@@ -29,13 +29,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run PSScriptAnalyzer
-        uses: microsoft/psscriptanalyzer-action@main
-        with:
-          path: './'
-          recurse: true
-          output: results.sarif
-      - name: Upload SARIF results
-        if: always()
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: results.sarif
+        shell: pwsh
+        run: |
+          $results = Invoke-ScriptAnalyzer -Path ./ -Recurse -Severity Error
+          if ($results) {
+            $results | Format-Table -AutoSize
+            throw "PSScriptAnalyzer found $($results.Count) error(s)"
+          }
+          Write-Output "PSScriptAnalyzer: No errors found"
